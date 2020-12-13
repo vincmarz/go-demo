@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: message-app-staging
   namespace: argocd
-  environment: staging
+  environment: demo-app-staging
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -18,7 +18,7 @@ spec:
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
-    namespace: staging
+    namespace: demo-app-staging
 
   syncPolicy:
     automated:
