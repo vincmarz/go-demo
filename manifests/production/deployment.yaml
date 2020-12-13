@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: message-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: message-app
+  template:
+    metadata:
+      labels:
+        app: message-app
+    spec:
+      containers:
+      - image:  vincmarz/message-app:v1
+        name: message-app
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: message-configmap
