@@ -5,4 +5,4 @@ metadata:
   labels:
     app: message-app
 data:
-  MESSAGE: "The content of the staging configmap"
+  MESSAGE: "The content of the staging configmap is changed!"
